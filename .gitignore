@@ -19,6 +19,11 @@
 .DS_Store
 .idea
 *.swp
+/.idea/
 
 # Ignore coverage folder
 /coverage
+
+*/.idea/workspace.xml
+*/.idea/tasks.xml
+*/.idea/*.iml
