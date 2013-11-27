@@ -13,3 +13,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the local workspace changes
+#idea files
+.DS_Store
+.idea
+*.swp
+
+# Ignore coverage folder
+/coverage
