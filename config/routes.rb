@@ -2,11 +2,11 @@ LibraryApp::Application.routes.draw do
 
   root :to => 'library_manager#index'
 
-  match 'library' => 'library_manager/index'
+  match 'library' => 'library_manager#index'
 
-  match 'assetgrid' => 'library_manager/assets'
+  match 'assetgrid' => 'library_manager#assets'
 
-  match 'unauthorized' => 'library_manager/unauthorized'
+  match 'unauthorized' => 'library_manager#unauthorized'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
