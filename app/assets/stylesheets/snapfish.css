@@ -1,0 +1,148 @@
+body {
+    font-family: "Arial,Helvetica,Verdana,Sans-serif";
+    font-size: 11px;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+ul,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2f2f2f;
+    font-size: 0;
+    line-height: 0;
+}
+
+.header .logo,.header .tabs,.header .upload_layer {
+    display: inline-block;
+}
+
+
+.libContainer{
+    padding: 0 2em;
+}
+
+/*logo start*/
+.header div.logo {
+    font-size: 14px;
+    min-width: 262px;
+
+    padding-left: 10px;
+}
+
+.header .logo {
+    background: url("snapfish_logo.png") no-repeat right ;
+    height: 80px;
+}
+
+
+/*logo end*/
+
+
+/*tabs start*/
+.header div.tabs {
+    font-size: 16px;
+    height: 80px;
+    width:500px;
+    }
+
+.tabs ul {
+    list-style: none outside none;
+    padding-left: 0;
+}
+
+.tabs ul li {
+    float: left;
+    width: 50%;
+    display: inline;
+    text-align: center;
+}
+
+.tabs .aligndiv {
+    margin: auto;
+    width: 320px;
+}
+
+.tabs .aligndiv  ul li {
+    line-height: 80px;
+    cursor: pointer;
+    font-size: 24px;
+}
+/*tabs end*/
+
+/* upload start */
+div.header div.upload_layer a{
+    color:#ffffff;
+    padding: 15px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #3399CC;
+    display:block;
+    }
+
+
+div.header div.upload_layer {
+    margin-top: 27px;
+    float: right;
+    margin-right: 20px;
+ }
+
+/* upload end */
+
+.main-Container{
+    width:1024px;
+    margin:0 auto;
+}
+
+.main-Container .header{
+    border-bottom: 2px solid #D8D8D8;
+    width:1080px;
+    }
+
+/*generic*/
+.container {
+    padding-top: 1.5em;
+}
+
+.visuallyhidden {
+    display: none;
+}
+
+
+/* search container start */
+.searchfilterContainer .customfilter, .searchfilterContainer .defaultfilter {
+    width: 350px;
+}
+
+.searchfilterContainer div {
+    display: inline-block;
+}
+
+.searchfilterContainer .defaultfilter {
+    float: right;
+}
+
+.searchfilterContainer .defaultfilter input{
+    border: 0;
+    padding: 0;
+}
+
+
+.searchfilterContainer .customfilter {
+    font-size:14px;
+}
+.searchfilterContainer img,.searchfilterContainer div {
+    vertical-align: middle;
+}
+/* search container end */

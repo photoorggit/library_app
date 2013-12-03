@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe "library_manager/index.html.erb" do
+describe "library_header/library.html.erb" do
   pending "add some examples to (or delete) #{__FILE__}"
 end
