@@ -1,7 +1,4 @@
 class LibraryManagerController < ApplicationController
-  def index
-  end
-
-  def unauthorized
+  def library
   end
 end

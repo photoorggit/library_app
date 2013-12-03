@@ -1,7 +1,6 @@
 var TabEventsView = Backbone.View.extend({
-    el : '.tabs',
     events : {
-        "click .tabs ul li" : "render"
+        "click ul li" : "render"
     },
     render : function(event) {
         event.preventDefault();

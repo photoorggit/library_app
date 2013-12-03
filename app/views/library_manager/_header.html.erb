@@ -1,1 +1,22 @@
-hi header
+<script type="text/javascript">
+    $(function() {
+
+        var tabEventsView = new TabEventsView({el : '.tabs'});
+
+        var inputListView = new InputListView({el: '.searchfilterContainer container' });
+    });
+</script>
+
+
+<div class="searchfilterContainer container">
+  <div class="customfilter">
+    <%= image_tag("left-arr.png", :alt => "left-arr icon",:class => "icon-search") %>
+    Help me find my photos
+  </div>
+  <div class="defaultfilter">
+    <input type="text" name="s" class="searchbar"></input>
+    <%= image_tag("s.png", :alt => "search icon",:class => "icon-search") %>
+  </div>
+  <div class="clear"></div>
+</div>
+

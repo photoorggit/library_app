@@ -1,6 +1,8 @@
+/*common start*/
 body {
     font-family: "Arial,Helvetica,Verdana,Sans-serif";
-    font-size: 11px;
+    font-weight:100;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -12,6 +14,28 @@ ul,p {
     margin-top: 0;
     margin-bottom: 0;
 }
+/*common end*/
+
+
+.main-Container{
+    width:1080px;
+    margin:0 auto;
+}
+
+.main-Container .header{
+    border-bottom: 2px solid #D8D8D8;
+    width:1080px;
+}
+
+/*generic start*/
+.container {
+    padding: 15px 0 ;
+}
+
+.visuallyhidden {
+    display: none;
+}
+
 
 div.arrow-down {
     width: 0;
@@ -22,30 +46,27 @@ div.arrow-down {
     font-size: 0;
     line-height: 0;
 }
+/*generic end*/
+
+
+
+
 
 .header .logo,.header .tabs,.header .upload_layer {
     display: inline-block;
 }
 
 
-.libContainer{
-    padding: 0 2em;
-}
+.libContainer{}
 
 /*logo start*/
 .header div.logo {
+    background: url("snapfish_logo.png") no-repeat right ;
     font-size: 14px;
     min-width: 262px;
-
     padding-left: 10px;
-}
-
-.header .logo {
-    background: url("snapfish_logo.png") no-repeat right ;
     height: 80px;
 }
-
-
 /*logo end*/
 
 
@@ -77,6 +98,7 @@ div.arrow-down {
     line-height: 80px;
     cursor: pointer;
     font-size: 24px;
+    color:#A4A4A4;
 }
 /*tabs end*/
 
@@ -93,36 +115,25 @@ div.header div.upload_layer a{
 
 
 div.header div.upload_layer {
-    margin-top: 27px;
+    margin-top: 16px;
     float: right;
     margin-right: 20px;
  }
 
 /* upload end */
 
-.main-Container{
-    width:1024px;
-    margin:0 auto;
-}
-
-.main-Container .header{
-    border-bottom: 2px solid #D8D8D8;
-    width:1080px;
-    }
-
-/*generic*/
-.container {
-    padding-top: 1.5em;
-}
-
-.visuallyhidden {
-    display: none;
-}
-
 
 /* search container start */
 .searchfilterContainer .customfilter, .searchfilterContainer .defaultfilter {
     width: 350px;
+}
+.searchfilterContainer .customfilter{
+    padding-left: 35px;
+}
+
+div.searchfilterContainer{
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #D8D8D8;
 }
 
 .searchfilterContainer div {
@@ -130,18 +141,31 @@ div.header div.upload_layer {
 }
 
 .searchfilterContainer .defaultfilter {
+    padding-top: 2px;
     float: right;
+    width: 280px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 }
 
 .searchfilterContainer .defaultfilter input{
     border: 0;
     padding: 0;
+    width:235px;
 }
 
 
 .searchfilterContainer .customfilter {
     font-size:14px;
 }
+
+.searchfilterContainer img{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
 .searchfilterContainer img,.searchfilterContainer div {
     vertical-align: middle;
 }
