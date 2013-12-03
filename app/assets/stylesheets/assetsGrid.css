@@ -1,0 +1,23 @@
+.collage{
+
+    /*This is where you set the padding you want between the images*/
+    padding:8px;
+
+}
+.collage img{
+    margin:0;
+    padding:0;
+    display:inline-block;
+    vertical-align:bottom;
+    opacity:1;
+
+    /*This is where you set the border you want for the image*/
+    /*border:6px solid gray;*/
+}
+.monthbar{
+    padding:8px;
+    font-family: Arial;
+    font-size: 26px;
+    line-height: 30px;
+    background-color: lightgray;
+}
