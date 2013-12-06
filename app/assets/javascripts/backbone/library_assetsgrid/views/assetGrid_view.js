@@ -10,6 +10,7 @@ var pictView = Backbone.View.extend({
 });
 var yearGridView = Backbone.View.extend({
     ygv : null,
+    pgId : [],
     initialize: function(){
         _.bindAll(this,'render');
         ygv = this;
@@ -19,6 +20,7 @@ var yearGridView = Backbone.View.extend({
         photosYear = year.year;
         $(ygv.el).append('<div id='+photosYear+'><p class="monthbar">'+photosYear+'</p><div id=pg'+photosYear+' class=collage></div></div>');
         //k.addPictToPictCollection(year.pics, k, 'pg'+photosYear);
+        ygv.pgId.push("pg"+photosYear);
         pgv = new PictureGridView({el: '#pg'+photosYear});
         pgv.addPictToPictCollection(year.pics, pgv);
         $('#pg'+photosYear).collagePlus({
