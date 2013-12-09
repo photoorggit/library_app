@@ -1,13 +1,34 @@
-
+<!--below div will store assets information in grid model-->
 <div id="assetGrid">
-
+</div>
+<!--Once all images are loaded we have to remove it TODO :Hiding once all images are loaded -->
+<div id="loadingBar">
+  Loading ......
 </div>
 
 <script type="text/javascript">
+  //Once document is reading then
     $( document ).ready(function() {
+        //Creating assetGridRouter it will create grids with pictures
         new assetGridRouter();
         Backbone.emulateHTTP = true;
         Backbone.emulateJSON = true;
         Backbone.history.start();
+        //$('#librayHeader').addClass('fixedLibrayBar')
     });
+  window.onscroll = function(){
+      var scrollTop = photoLib.Util.Dom.getPageScrollPosition();
+      if(scrollTop < 100){
+          $('#librayHeader').addClass('fixedLibrayBar')
+      }
+      else{
+       if($('#librayHeader').addClass('fixedLibrayBar')){
+
+       }else{
+
+       }
+      }
+
+  }
+
 </script>

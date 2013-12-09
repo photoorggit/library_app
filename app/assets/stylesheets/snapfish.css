@@ -1,4 +1,4 @@
-common start*/
+/*common start*/
 body {
     font-family: "Arial,Helvetica,Verdana,Sans-serif";
     font-weight:100;
@@ -213,4 +213,15 @@ div.searchfilterContainer{
 .searchfilterContainer img,.searchfilterContainer div {
     vertical-align: middle;
 }
-/* search container end 
+/* search container end*/
+
+/*added by sandeep start*/
+.fixedLibrayBar {
+   position : fixed;
+   top: 0px;
+   z-index: 5;
+   width: 630px;
+}
+/*end*/
+
+
