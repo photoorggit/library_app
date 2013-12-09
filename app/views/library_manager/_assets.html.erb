@@ -16,16 +16,15 @@
         Backbone.history.start();
         //$('#librayHeader').addClass('fixedLibrayBar')
     });
-  window.onscroll = function(){
-      var scrollTop = photoLib.Util.Dom.getPageScrollPosition();
-      if(scrollTop < 100){
+  window.onscroll = function(){ console.log();
+      var scrollTop = photoLib.Util.Dom.getPageScrollPosition().scrollTop;
+      console.log(scrollTop);
+      if(scrollTop > 100){
           $('#librayHeader').addClass('fixedLibrayBar')
       }
       else{
-       if($('#librayHeader').addClass('fixedLibrayBar')){
-
-       }else{
-
+       if($('#librayHeader').hasClass('fixedLibrayBar')){
+           $('#librayHeader').removeClass('fixedLibrayBar')
        }
       }
 
