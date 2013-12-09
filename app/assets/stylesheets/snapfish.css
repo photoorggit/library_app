@@ -1,4 +1,4 @@
-/*common start*/
+common start*/
 body {
     font-family: "Arial,Helvetica,Verdana,Sans-serif";
     font-weight:100;
@@ -103,7 +103,7 @@ div.arrow-down {
 /*tabs end*/
 
 /* upload start */
-div.header div.upload_layer a{
+/*div.header div.upload_layer a{
     color:#ffffff;
     padding: 15px;
     -webkit-border-radius: 10px;
@@ -113,12 +113,56 @@ div.header div.upload_layer a{
     display:block;
     }
 
+*/
 
 div.header div.upload_layer {
-    margin-top: 16px;
+    margin-top: 14px;
     float: right;
     margin-right: 20px;
  }
+
+
+ /* new upload */
+ .upload{
+    border-radius: 7px;
+    display: inline-block;
+    
+    min-width: 100px;
+    max-width: 200px;
+    
+    padding:13px;
+    
+    color:#ffffff;
+    background-color: #3399CC;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.upload .box {
+    background-color: #ffffff;
+}
+
+.upload .box {
+display: inline-block;
+
+color: #3399CC; /*snapfish blue*/
+background: radial-gradient(circle at top left, #ffffff,#ffffff);
+
+width:20px;
+height: 17px;
+
+
+
+text-align: center;
+
+/*background: -moz-linear-gradient(to left,red,yellow);*/
+padding: 2px;
+-webkit-border-radius:50%;
+border-radius: 50%;
+}
+ 
+ /*new upload end*/
 
 /* upload end */
 
@@ -169,4 +213,4 @@ div.searchfilterContainer{
 .searchfilterContainer img,.searchfilterContainer div {
     vertical-align: middle;
 }
-/* search container end */
+/* search container end 
