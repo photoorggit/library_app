@@ -5,15 +5,13 @@ var TabEventsView = Backbone.View.extend({
     render : function(event) {
         event.preventDefault();
         var li=$(event.currentTarget).parent().children('li');
-        li.css('font-weight', 'lighter');
-        $(event.currentTarget).css('font-weight','900');
+        li.find( "span").removeClass('active');
+        $(event.currentTarget).find( "span").addClass('active');
         //libContainer
-      var clickedLi = $(event.currentTarget).children().text().trim();
-             if(!clickedLi.indexOf("Stories")){
-                $(".fluidGridContainer").hide();
+      var clickedSpan = $(event.currentTarget).find("span").text().trim();
+             if(!clickedSpan.indexOf("Stories")){
                 $(".libContainer").hide();
              }else{
-                 $(".fluidGridContainer").show();
                  $(".libContainer").show();
              }
         return false;

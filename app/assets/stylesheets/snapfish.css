@@ -1,13 +1,17 @@
 /*common start*/
 body {
     font-family: "Arial,Helvetica,Verdana,Sans-serif";
-    font-weight:100;
+    font-weight:normal;
     font-size: 12px;
     margin: 0;
 }
 
 .clear {
     clear: both;
+}
+
+.active{
+    color:#A4A4A4;
 }
 
 .reset-rotate{
@@ -48,7 +52,6 @@ ul,p {
 }
 
 .main-Container .header{
-    border-bottom: 2px solid #D8D8D8;
     width:1080px;
 }
 
@@ -103,7 +106,7 @@ div.arrow-down {
 .header div.tabs {
     font-size: 16px;
     height: 80px;
-    width:500px;
+    width:55%;
     }
 
 .tabs ul {
@@ -127,7 +130,7 @@ div.arrow-down {
     line-height: 80px;
     cursor: pointer;
     font-size: 24px;
-    color:#A4A4A4;
+    color: #D8D8D8;
 }
 /*tabs end*/
 
