@@ -245,4 +245,13 @@ div.searchfilterContainer{
 .searchfilterContainer img,.searchfilterContainer div {
     vertical-align: middle;
 }
-/* search container end */
+/* search container end*/
+
+/*added by sandeep start*/
+.fixedLibrayBar {
+   position : fixed;
+   top: 0px;
+   z-index: 5;
+   width: 1080px;
+}
+/*end*/
