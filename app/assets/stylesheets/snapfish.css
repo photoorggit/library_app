@@ -14,6 +14,14 @@ body {
     color:#A4A4A4;
 }
 
+body .visibleElement{
+    visibility: visible;
+}
+
+body .hideElement{
+    visibility: hidden;
+}
+
 .reset-rotate{
 -moz-transform: rotate(0deg);
 -webkit-transform:rotate(0deg);
@@ -85,7 +93,9 @@ div.arrow-down {
 }
 
 
-.libContainer{}
+.libContainer{
+    visibility:hidden;
+}
 
 .header{
     height: 80px;
