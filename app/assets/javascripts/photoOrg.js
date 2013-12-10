@@ -18,96 +18,6 @@ PhotoLibrary.prototype.Util.Dom = {};
 PhotoLibrary.prototype.Util.Dom =
    {
         /**
-         * @return It returns the x/y offset between the element el and the browser's viewport left/top.
-         *         The returned object has { offsetTop, offsetLeft }
-         * - remove this function once old sofi files are cleaned
-         */
-        getBrowserViewportOffsetToElement: function (el) {
-            var upstream = { offsetTop: 0, offsetLeft: 0 };
-            var thisNode = el;
-            while (thisNode) {
-                upstream.offsetTop += thisNode.offsetTop + thisNode.clientTop -
-                    (thisNode.offsetParent ? thisNode.offsetParent.scrollTop : 0);
-                upstream.offsetLeft += thisNode.offsetLeft + thisNode.clientLeft -
-                    (thisNode.offsetParent ? thisNode.offsetParent.scrollLeft : 0);
-                thisNode = thisNode.offsetParent;
-            }
-            return upstream;
-        },
-
-        /**
-         * @return It returns the x/y offset between the descendant element and the ancestor element.
-         *         The returned offset object has { offsetTop, offsetLeft }
-         *         - remove this function once old sofi files are cleaned
-         */
-        getDescendantOffsetToAncestor: function (ancestor, descendant) {
-            var offset = { offsetTop: 0, offsetLeft: 0 };
-            var thisNode = descendant;
-            while (thisNode && ancestor != thisNode) {
-                offset.offsetTop += thisNode.clientTop + thisNode.offsetTop -
-                    (thisNode.offsetParent ? thisNode.offsetParent.scrollTop : 0);
-                offset.offsetLeft += thisNode.clientLeft + thisNode.offsetLeft -
-                    (thisNode.offsetParent ? thisNode.offsetParent.scrollLeft : 0);
-                thisNode = thisNode.offsetParent;
-            }
-            return offset;
-        },
-
-        /**
-         * @return It returns the x/y offset between the descendant element and the ancestor element
-         *         based on their structure without considering the runtime scrolling offsets.
-         *         The returned offset object has { offsetTop, offsetLeft }
-         *         - remove this function once old sofi files are cleaned
-         */
-        getDescendantStructuralOffsetToAncestor: function (ancestor, descendant) {
-            var offset = { offsetTop: 0, offsetLeft: 0 };
-            var thisNode = descendant;
-            while (thisNode && ancestor != thisNode) {
-                offset.offsetTop += thisNode.clientTop + thisNode.offsetTop;
-                offset.offsetLeft += thisNode.clientLeft + thisNode.offsetLeft;
-                thisNode = thisNode.offsetParent;
-            }
-            return offset;
-        },
-
-        /**
-         * @param id is a string of an ID to search for.
-         * @param rootEl is optional, if omitted, then the search begins at the document root.  If
-         *               specified, then the search begins from that supplied rootEl.
-         * @return It returns an array of matched DOM elements found, or null if not found
-         * - remove this function once old sofi files are cleaned
-         */
-        getDescendantById: function (id, rootEl) {
-            if (!id || typeof id != "string") {
-                return null;
-            }
-            if (rootEl) {
-                if (1 != rootEl.nodeType) {
-                    return null;
-                }
-            } else {
-                rootEl = document;
-            }
-            if (rootEl.id && rootEl.id == id) {
-                return rootEl;
-            }
-            var i = 0, nodeFound = null;
-            if (rootEl.childNodes && rootEl.childNodes.length > 0) {
-                for (i = 0; i < rootEl.childNodes.length; i++) {
-                    if (1 != rootEl.childNodes[i].nodeType) {
-                        continue;
-                    }
-                    nodeFound = arguments.callee(id, rootEl.childNodes[i]);
-                    if (nodeFound) {
-                        return nodeFound;
-                    }
-                }
-            } else {
-                return null;
-            }
-        },
-
-        /**
          * This method gives the the scrollBar position(left and top)
          *
          * @return It returns a object having scrollTop and scrollLeft position
@@ -133,8 +43,6 @@ PhotoLibrary.prototype.Util.Dom =
          *
          * @returns {___anonymous21675_21676}
          */
-
-
         getBrowserViewportDimension: function () {
             var dim = {};
             if (undefined !== document.documentElement &&

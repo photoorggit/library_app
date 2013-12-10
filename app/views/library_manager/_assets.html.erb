@@ -7,27 +7,40 @@
 </div>
 
 <script type="text/javascript">
+    var aGr;
+    var loadAssets = true;
   //Once document is reading then
-    $( document ).ready(function() {
-        //Creating assetGridRouter it will create grids with pictures
-        new assetGridRouter();
-        Backbone.emulateHTTP = true;
-        Backbone.emulateJSON = true;
-        Backbone.history.start();
-        //$('#librayHeader').addClass('fixedLibrayBar')
-    });
-  window.onscroll = function(){ console.log();
+  $(document).ready(function () {
+      //Creating assetGridRouter it will create grids with pictures
+      aGr = new assetGridRouter();
+      Backbone.emulateHTTP = true;
+      Backbone.emulateJSON = true;
+      Backbone.history.start();
+      //$('#librayHeader').addClass('fixedLibrayBar')
+  });
+  window.onscroll = processScroll;
+  function processScroll(){
       var scrollTop = photoLib.Util.Dom.getPageScrollPosition().scrollTop;
-      console.log(scrollTop);
       if(scrollTop > 100){
-          $('#librayHeader').addClass('fixedLibrayBar')
+          $('#librayHeader').addClass('fixedLibrayBar');
+          var loadingBarPosition = photoLib.Util.Dom.findYPos($('#loadingBar').get(0));
+          var viewPortHeight =  photoLib.Util.Dom.getBrowserViewportDimension().height;
+          if(loadingBarPosition+10 < (viewPortHeight + scrollTop) && loadAssets){
+            loadOtherPicts();
+          }
       }
       else{
-       if($('#librayHeader').hasClass('fixedLibrayBar')){
-           $('#librayHeader').removeClass('fixedLibrayBar')
-       }
+          if($('#librayHeader').hasClass('fixedLibrayBar')){
+              $('#librayHeader').removeClass('fixedLibrayBar')
+          }
       }
-
   }
-
+    //TODO:Need to do some changes based on userasset API
+  function loadOtherPicts(){
+     aGr.loadRemainingAssets();
+     loadAssets = false;
+     if(!loadAssets){
+         $("#loadingBar").hide();
+     }
+  }
 </script>
