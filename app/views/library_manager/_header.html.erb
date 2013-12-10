@@ -1,22 +1,30 @@
 <script type="text/javascript">
     $(function() {
-
+        //to remove script tag
         var tabEventsView = new TabEventsView({el : '.tabs'});
 
-        var inputListView = new InputListView({el: '.searchfilterContainer container' });
+        var inputListView = new InputListView({el: '.searchfilterContainer' });
     });
 </script>
 
+<!-- user search filter container start -->
+<div class="searchfilterContainer container">  
 
-<div class="searchfilterContainer container">
+  <!-- custom date filter start -->
   <div class="customfilter">
     <%= image_tag("left-arr.png", :alt => "left-arr icon",:class => "icon-search") %>
-    Help me find my photos
+    <span>Help me find my photos</span>
   </div>
+  <!-- custom date filter end -->
+  
+  <!-- default filter start -->
   <div class="defaultfilter">
     <input type="text" name="s" class="searchbar"></input>
-    <%= image_tag("s.png", :alt => "search icon",:class => "icon-search") %>
+    <%= image_tag("s.png", :alt => "",:class => "icon-search") %>
   </div>
+  <!-- default filter end -->
+
   <div class="clear"></div>
 </div>
+<!-- user search filter container end -->
 

@@ -1,4 +1,4 @@
-common start*/
+/*common start*/
 body {
     font-family: "Arial,Helvetica,Verdana,Sans-serif";
     font-weight:100;
@@ -9,6 +9,31 @@ body {
 .clear {
     clear: both;
 }
+
+.reset-rotate{
+-moz-transform: rotate(0deg);
+-webkit-transform:rotate(0deg);
+-o-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+transform: rotate(0deg);
+}
+
+.rotate-45-deg{
+-moz-transform: rotate(45deg);
+-webkit-transform:rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);    
+}
+
+.rotate-90-deg{
+-moz-transform: rotate(90deg);
+-webkit-transform:rotate(90deg);
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+
 
 ul,p {
     margin-top: 0;
@@ -59,6 +84,10 @@ div.arrow-down {
 
 .libContainer{}
 
+.header{
+    height: 80px;
+}
+
 /*logo start*/
 .header div.logo {
     background: url("snapfish_logo.png") no-repeat right ;
@@ -103,7 +132,8 @@ div.arrow-down {
 /*tabs end*/
 
 /* upload start */
-/*div.header div.upload_layer a{
+
+    /*div.header div.upload_layer a{
     color:#ffffff;
     padding: 15px;
     -webkit-border-radius: 10px;
@@ -111,59 +141,44 @@ div.arrow-down {
     text-decoration: none;
     background-color: #3399CC;
     display:block;
-    }
-
-*/
+    }*/
 
 div.header div.upload_layer {
-    margin-top: 14px;
     float: right;
-    margin-right: 20px;
+    margin: 20px;
  }
 
 
  /* new upload */
  .upload{
-    border-radius: 7px;
     display: inline-block;
-    
-    min-width: 100px;
-    max-width: 200px;
-    
-    padding:13px;
-    
     color:#ffffff;
-    background-color: #3399CC;
-    text-decoration: none;
+    background-color: #3399CC;    
     font-size: 14px;
     font-weight: bolder;
+    text-decoration: none;
+    text-align: center;  
+    padding:10px;
+    height: 20px;
+    min-width: 130px;
+    max-width: 200px;  
+    -webkit-border-radius:7px;
+    border-radius: 7px;
 }
 
 .upload .box {
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    color: #3399CC; /*snapfish blue*/
     background-color: #ffffff;
-}
-
-.upload .box {
-display: inline-block;
-
-color: #3399CC; /*snapfish blue*/
-background: radial-gradient(circle at top left, #ffffff,#ffffff);
-
-width:20px;
-height: 17px;
-
-
-
-text-align: center;
-
-/*background: -moz-linear-gradient(to left,red,yellow);*/
-padding: 2px;
--webkit-border-radius:50%;
-border-radius: 50%;
+    background: radial-gradient(circle at top left, #ffffff,#ffffff);
+    width:20px;
+    height: 17px;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
 }
  
- /*new upload end*/
-
 /* upload end */
 
 
@@ -189,28 +204,45 @@ div.searchfilterContainer{
     float: right;
     width: 280px;
     margin-right: 20px;
-    background-color: #ffffff;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    background-color: #ffffff;    
+    -webkit-border-radius: 20px;    
+    border-radius: 20px;
 }
 
 .searchfilterContainer .defaultfilter input{
+    /*remove the bordered 
+    selection upon selecting*/
+    outline: 0; 
     border: 0;
     padding: 0;
+    padding-left: 8px;
+    height: 23px;
     width:235px;
+    -webkit-border-radius: 20px;    
+    border-radius: 20px;
 }
-
 
 .searchfilterContainer .customfilter {
     font-size:14px;
 }
 
+.searchfilterContainer .customfilter img{
+    height: 30px;
+    width: 30px;
+}
+
+.searchfilterContainer .customfilter span{
+ padding-left: 5px;
+}
+
+
 .searchfilterContainer img{
     -webkit-border-radius: 10px;
     border-radius: 10px;
+    height: 27px;
 }
 
 .searchfilterContainer img,.searchfilterContainer div {
     vertical-align: middle;
 }
-/* search container end 
+/* search container end */
