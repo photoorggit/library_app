@@ -108,61 +108,6 @@ PhotoLibrary.prototype.Util.Dom =
         },
 
         /**
-         * @param oneClassname is a string with one style classname to search for.
-         * @param rootEl is optional, if omitted, then the search begins at the document root.  If
-         *               specified, then the search begins from that supplied rootEl.
-         * @return It returns an array of all matched DOM elements found, or null if not found
-         * - remove this function once old sofi files are cleaned
-         */
-        getDescendantsByStyleClass: function (oneClassname, rootEl) {
-            if (!oneClassname || typeof oneClassname != "string") {
-                return null;
-            }
-            if (rootEl) {
-                if (1 != rootEl.nodeType) {
-                    return null;
-                }
-            } else {
-                rootEl = document;
-            }
-            var i = 0, nodes = null, nodesFound = null, t = null;
-            if (rootEl.childNodes && rootEl.childNodes.length > 0) {
-                for (i = 0; i < rootEl.childNodes.length; i++) {
-                    if (1 != rootEl.childNodes[i].nodeType) {
-                        continue;
-                    }
-                    nodesFound = arguments.callee(oneClassname, rootEl.childNodes[i]);
-                    if (nodesFound) {
-                        if (nodes) {
-                            nodes = nodes.concat(nodesFound);
-                            delete nodesFound;
-                        } else {
-                            nodes = nodesFound;
-                        }
-                        nodesFound = null;
-                    }
-                }
-            }
-
-            var attr = SFDam.util.UA.isIE && SFDam.util.UA.version < 8 ? "className" : "class";
-            var existingClasses = rootEl.getAttribute(attr);
-            if (!existingClasses) {
-                return nodes;
-            }
-            var classArr = existingClasses.split(/\s+/);
-            for (i = 0; i < classArr.length; i++) {
-                if (oneClassname == classArr[i]) {
-                    break;
-                }
-            }
-            if (i < classArr.length) {
-                return nodes ? nodes.push(rootEl) : [rootEl];
-            } else {
-                return nodes;
-            }
-        },
-
-        /**
          * This method gives the the scrollBar position(left and top)
          *
          * @return It returns a object having scrollTop and scrollLeft position
