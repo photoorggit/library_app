@@ -5,65 +5,75 @@
   <div class="header">
 
     <!-- logo start -->
-    <div class="logo"></div>
+    <div class="col1">
+      <div id="headerLogo" class="headerLogo_full" itemtype="http://schema.org/Organization" itemscope="">
+        <a href="http://www.snapfish.com">
+          <h1></h1><img border="0" src="assets/snapfish_logo.png" alt="Snapfish by Hp" title="Go to Snapfish page."></img></h1>
+        </a>
+      </div>
+
+    </div>
     <!-- logo end -->
 
-    <!-- tabs start -->
-    <div class="tabs">
 
-      <!-- aligndiv tab start -->
-      <div class="aligndiv">
-        <ul>
-          <li>
+
+
+    <!-- tabs start -->
+    <div class="col2">
+      <div class="tabs">
+        <!-- aligndiv tab start -->
+        <div class="aligndiv">
+          <ul>
+            <li>
             <span>
               Library
             </span>
 
-          <li>
+            <li>
             <span>
               Stories
             </span>
 
-          </li>
-          <div class="clear">
-          </div>
-        </ul>
+            </li>
+            <div class="clear">
+            </div>
+          </ul>
+        </div>
+        <!-- aligndiv tab end -->
+
+        <!-- upload start -->
+        <div class="upload_layer">
+          <a href="" class="upload">
+            Add photos&nbsp;
+            <span class="box">+</span>
+          </a>
+        </div>
+        <div class="clear"></div>
+        <!-- upload end -->
       </div>
-      <!-- aligndiv tab end -->
-      <div class="clear"></div>
+      <!-- tabs end -->
     </div>
-    <!-- tabs end -->
 
-    <!-- upload start -->
-    <div class="upload_layer">
-      
-    <a href="" class="upload">
-      Add photos&nbsp; 
-      <span class="box">+</span>
-    </a>
-
-
-    </div>
     <div class="clear"></div>
-    <!-- upload end -->
+
 
   </div>
   <!-- header end -->
-   <div style="border-bottom: 2px solid #D8D8D8;"></div>
+  <div style="border-bottom: 2px solid #D8D8D8;"></div>
   <!-- library container start -->
-<div class="libContainer">
-  <!-- library header container start -->
-  <div class="libHeaderContainer" id="librayHeader">
-    <%= render :partial => "header"%>
-  </div>
-  <!-- library header container end -->
+  <div class="libContainer">
+    <!-- library header container start -->
+    <div class="libHeaderContainer" id="librayHeader">
+      <%= render :partial => "header"%>
+    </div>
+    <!-- library header container end -->
 
-  <!-- fluid grid container start -->
-  <div class="fluidGridContainer">
-    <%= render :partial => "assets"%>
+    <!-- fluid grid container start -->
+    <div class="fluidGridContainer">
+      <%= render :partial => "assets"%>
+    </div>
+    <!-- fluid grid container end -->
   </div>
-  <!-- fluid grid container end -->
-</div>
   <!-- library container end -->
 
 </div>
