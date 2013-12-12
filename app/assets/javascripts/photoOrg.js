@@ -6,17 +6,11 @@
  * To change this template use File | Settings | File Templates.
  *
  */
-var plInstance;// photolib instance
 var PhotoLibrary = function () {
-    if (plInstance instanceof PhotoLibrary)
-        return plInstance;
-    else
-        return this;
-};
-PhotoLibrary.prototype.Util = {};
-PhotoLibrary.prototype.Util.Dom = {};
-PhotoLibrary.prototype.Util.Dom =
-   {
+    this.Util = {};
+    this.Util.Dom = {};
+    this.Util.Dom =
+    {
         /**
          * This method gives the the scrollBar position(left and top)
          *
@@ -74,8 +68,77 @@ PhotoLibrary.prototype.Util.Dom =
                 } while (obj = obj.offsetParent);
             }
             return curtop;
+        },
+        /**
+         * getURl state hash value
+         */
+        getURLHash:function(){
+          return this.state;
+        },//TODO:Need to add code to handle hash
+        updateUrlHash:function(){
+            //current state value
+            var currentState = this.state;
+
+        }
+    };
+    this.Util.state={};
+    this.Filter = {};
+    this.Filter.Library = {};
+    this.Filter.Library = {
+        /*
+         It returns search filter array
+         */
+        getSearchFilters: function () {
+            return this.searchFilter;
+        },
+        /**
+         * Using below method we can set/add filter
+         */
+        setSearchFilter: function (filter) {
+            this.searchFilter.push(filter);
+        },
+        /**
+         * To remove filter from searchfilter
+         * @param filter
+         */
+        removeSearchFilter: function (filter) {
+            this.searchFilter.pop(filter)
+        },
+        /**
+         * Resting search filter with empty
+         */
+        resetSearchFilter: function () {
+            this.searchFilter.length = 0;
+        },
+        /**
+         *
+         * @returns {*}
+         */
+        getDateFilter: function () {
+            return this.dateFilter;
+        },
+        /**
+         * it will set start time
+         * @param start
+         */
+        setStartDate: function (start) {
+            this.dateFilter.dateStart = start;
+        },
+        /**
+         * It will End time
+         * @param end
+         */
+        setEndDate: function (end) {
+            this.dateFilter.dateEnd = end;
         }
     }
-
+    /**
+     * Libray filter global varialbs
+     */
+    this.Filter.Library.searchFilter = [],
+    this.Filter.Library.dateFilter = {'dateStart': '', 'dateEnd': ''},
+    //TODO:Need to add filter specific to stories if any
+    this.Filter.Stories = {};
+}
 
 var photoLib = new PhotoLibrary();

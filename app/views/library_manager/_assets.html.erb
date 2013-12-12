@@ -1,6 +1,13 @@
 <!--below div will store assets information in grid model-->
 <div id="assetGrid">
 </div>
+<script type="text/template" id="yearGrid">
+  <div id='<%%= photosYear %>'><p class='monthbar'><%%= photosYear %></p><div id='pg<%%= photosYear %>' class='collage'></div></div>
+</script>
+<script type="text/template" id="pictView">
+    <div></div>
+    <img src='<%%= url %>' width='<%%= width %>px' height='<%%= height %>px' />
+</script>
 <!--Once all images are loaded we have to remove it TODO :Hiding once all images are loaded -->
 <div id="loadingBar">
   Loading ......
