@@ -112,9 +112,12 @@ div.arrow-down {
     visibility:hidden;
 }
 
-.header{
+.main-Container  .header {
+    padding: 0 30px;
     height: 80px;
 }
+
+
 
 /*logo start*/
 .header div.logo {
@@ -209,7 +212,7 @@ div.arrow-down {
 
 /* search container start */
 .searchfilterContainer .customfilter, .searchfilterContainer .defaultfilter {
-    width: 350px;
+    width: 50%;
 }
 
 .searchfilterContainer .customfilter{
@@ -218,6 +221,7 @@ div.arrow-down {
 
 div.searchfilterContainer{
     background-color: #f2f2f2;
+    min-width: 561px;
     border-bottom: 2px solid #D8D8D8;
 }
 
@@ -284,18 +288,31 @@ div.searchfilterContainer{
 
 /* media start */
 
+
 @media screen and (max-width: 767px){
     .main-Container{
         width: 768px;
+    }
+
+    .header .col2{
+        width: 438px;
+    }
+
+    .header .tabs .aligndiv {
+     min-width: 67%;
+    }
+
+    .tabs ul {
+        width: 77%;
     }
 }
 
 
 /* minimum width : 768px start */
 @media (min-width: 768px) {
-  
-  .main-Container  .header {
-        padding: 0 30px;
+
+    .header .col2 {
+        min-width: 65.5%;
     }
 
   .header .tabs .aligndiv {
@@ -330,7 +347,7 @@ div.searchfilterContainer{
     }
 
     .header .col2 {
-        min-width: 66.5%;
+        min-width: 65.5%;
     }
     
     .header .tabs .aligndiv {
@@ -339,6 +356,15 @@ div.searchfilterContainer{
  
 }
 /* minimum width : 800px end */
+
+@media (min-width: 900px) {
+
+    .header .col2 {
+        min-width: 70.5%;
+    }
+    
+}
+
 
 /* minimum width : 980px start */
 @media (min-width: 980px){
