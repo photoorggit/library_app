@@ -60,12 +60,7 @@ ul,p {
 .header .col1{    
     min-width: 270px;    
 }
-.header .col1 img{    
- padding-left: 30px;
-}
-.header .col2{
-    min-width: 490px;
-}
+
 /*common end*/
 
 
@@ -80,7 +75,7 @@ ul,p {
 
 /*generic start*/
 .container {
-    padding: 15px 0 ;
+    padding: 15px 30px ;
 }
 
 .visuallyhidden {
@@ -176,7 +171,7 @@ div.arrow-down {
 
 .header .tabs .upload_layer{
     margin-top: 1.1em;       
-    min-width: 25%;
+    min-width: 30%;
 }
  /* new upload */
  a.upload{
@@ -216,8 +211,9 @@ div.arrow-down {
 .searchfilterContainer .customfilter, .searchfilterContainer .defaultfilter {
     width: 350px;
 }
+
 .searchfilterContainer .customfilter{
-    padding-left: 35px;
+
 }
 
 div.searchfilterContainer{
@@ -232,8 +228,7 @@ div.searchfilterContainer{
 .searchfilterContainer .defaultfilter {
     padding-top: 2px;
     float: right;
-    width: 280px;
-    margin-right: 20px;
+    width: 280px;    
     background-color: #ffffff;    
     -webkit-border-radius: 20px;    
     border-radius: 20px;
@@ -286,12 +281,21 @@ div.searchfilterContainer{
 }
 /*end*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .header .tabs .aligndiv{
-        min-width: 338px;
+@media (min-width: 768px) {
+  .main-Container  .header{
+        padding: 0 30px;
     }
 
-    .tabs ul {
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .header .tabs .aligndiv{
+        min-width: 295px;        
+    }
+
+   .header .tabs ul {
         width: 275px;
     }
 
@@ -299,11 +303,17 @@ div.searchfilterContainer{
 
 
 @media (min-width: 800px){
+
     .header .col1{    
         min-width: 20%;    
     }
+    
+    .header .col2{
+        min-width: 490px;
+    }
+
     .header .col2 {
-        min-width: 65%;
+        min-width: 66.5%;
     }
     
     .header .tabs .aligndiv {
@@ -315,14 +325,26 @@ div.searchfilterContainer{
     }
 }
 
+@media (min-width: 800px) and (max-width: 1280px){
+    .tabs ul {
+        width: 78%;
+    }
+}
+
 @media (min-width: 980px){
     .header .col2 {
-        min-width: 70%;
+        min-width: 73%;
     }
 
     .header .tabs .aligndiv {
         min-width: 75%;
     }
+
+    .header .tabs .upload_layer {
+        margin-top: 1.1em;
+        min-width: 25%;
+    }
+
 }
 
 
@@ -331,5 +353,15 @@ div.searchfilterContainer{
     .header .col2 {
         min-width: 75%;
     }
+
+    .header .col2 {
+        min-width: 79.5%;
+    }
+}
+
+@media (min-width: 1920px){
+    .header .col2 {
+        min-width: 80%;
+    }   
 }
 
