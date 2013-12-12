@@ -281,27 +281,37 @@ div.searchfilterContainer{
 }
 /*end*/
 
+
+/* media start */
+
+/* minimum width : 768px start */
 @media (min-width: 768px) {
-  .main-Container  .header{
+  
+  .main-Container  .header {
         padding: 0 30px;
     }
 
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .header .tabs .aligndiv{
+  .header .tabs .aligndiv {
         min-width: 295px;        
     }
 
-   .header .tabs ul {
-        width: 275px;
+  .tabs ul {
+        width: 77%;
     }
-
 }
+/* minimum width : 768px end */
 
 
+/* minimum width : 768px and maximum height : 1024px start */
+@media (min-width: 768px) and (max-height: 1024px) {
+    .tabs ul {
+        width: 76%;
+    }    
+}
+/* minimum width : 768px and maximum height : 1024px end */
+
+
+/* minimum width : 800px start */
 @media (min-width: 800px){
 
     .header .col1{    
@@ -319,19 +329,17 @@ div.searchfilterContainer{
     .header .tabs .aligndiv {
      min-width: 70%;
     }
-
-    .tabs ul {
-        width: 60%;
-    }
+ 
 }
+/* minimum width : 800px end */
 
-@media (min-width: 800px) and (max-width: 1280px){
-    .tabs ul {
-        width: 78%;
-    }
-}
-
+/* minimum width : 980px start */
 @media (min-width: 980px){
+    
+    .tabs ul {
+        width: 70%;
+    }
+
     .header .col2 {
         min-width: 73%;
     }
@@ -346,9 +354,14 @@ div.searchfilterContainer{
     }
 
 }
+/* minimum width : 980px end */
 
 
+/* minimum width : 1280px start */
 @media (min-width: 1280px){
+    .tabs ul {
+        width: 60%;
+    }
 
     .header .col2 {
         min-width: 75%;
@@ -358,10 +371,28 @@ div.searchfilterContainer{
         min-width: 79.5%;
     }
 }
+/* minimum width : 1280px end */
 
+
+/* minimum width : 1920px start */
 @media (min-width: 1920px){
     .header .col2 {
         min-width: 80%;
     }   
 }
+/* minimum width : 1920px end */
+
+
+/* media end */
+
+
+
+
+
+
+
+
+
+
+
 
