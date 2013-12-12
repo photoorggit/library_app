@@ -4,7 +4,9 @@ var pictView = Backbone.View.extend({
         _.bindAll(this, 'render'); // every function that uses 'this' as the current object should be in here
     },
     render: function(){
-        $(this.el).html('<img src='+this.model.get('url')+' width='+this.model.get('width')+'px height='+this.model.get('height')+'px />');
+        var html = _.template($('#pictView').html(), this.model.toJSON());
+        $(this.el).html(html);
+        //$(this.el).html('<img src='+this.model.get('url')+' width='+this.model.get('width')+'px height='+this.model.get('height')+'px />');
         return this; // for chainable calls, like .render().el
     }
 });
@@ -18,7 +20,10 @@ var yearGridView = Backbone.View.extend({
     },
     createYearGrid : function(year,yg){
         photosYear = year.year;
-        $(ygv.el).append('<div id='+photosYear+'><p class="monthbar">'+photosYear+'</p><div id=pg'+photosYear+' class=collage></div></div>');
+
+        var html = _.template($('#yearGrid').html(), {'photosYear':photosYear});
+        $(ygv.el).append(html);
+        //$(ygv.el).append('<div id='+photosYear+'><p class="monthbar">'+photosYear+'</p><div id=pg'+photosYear+' class=collage></div></div>');
         //k.addPictToPictCollection(year.pics, k, 'pg'+photosYear);
         ygv.pgId.push("pg"+photosYear);
         pgv = new PictureGridView({el: '#pg'+photosYear});
