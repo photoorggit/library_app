@@ -78,6 +78,7 @@ var PhotoLibrary = function () {
         updateUrlHash:function(){
             //current state value
             var currentState = this.state;
+            window.ur
 
         }
     };
@@ -130,6 +131,15 @@ var PhotoLibrary = function () {
          */
         setEndDate: function (end) {
             this.dateFilter.dateEnd = end;
+        },
+        /**
+         * It retuns sortFilter
+         */
+        getSortFilter:function(){
+            this.sortFilter;
+        },
+        setSortFilter:function(filter){
+            this.sortFilter.push(filter);
         }
     }
     /**
@@ -137,6 +147,7 @@ var PhotoLibrary = function () {
      */
     this.Filter.Library.searchFilter = [],
     this.Filter.Library.dateFilter = {'dateStart': '', 'dateEnd': ''},
+    this.Filter.Library.sortFilter = []
     //TODO:Need to add filter specific to stories if any
     this.Filter.Stories = {};
 }
