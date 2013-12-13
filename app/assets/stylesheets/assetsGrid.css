@@ -21,3 +21,19 @@
     line-height: 30px;
     background-color: lightgray;
 }
+.selectAsset{
+    background: url("select.jpg") no-repeat right ;
+    bottom: 5px;
+    height: 39px;
+    position: absolute;
+    right: 5px;
+    width: 39px;
+}
+.unselecteAsset{
+    background: url("unselect.jpg") no-repeat right ;
+    bottom: 5px;
+    height: 39px;
+    position: absolute;
+    right: 5px;
+    width: 39px;
+}

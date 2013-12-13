@@ -370,7 +370,9 @@
                     // Set vertical alignment otherwise you get 4px extra padding
                     'vertical-align'    : "bottom",
                     // Hide the overflow to hide the caption
-                    'overflow'          : "hidden"
+                    'overflow'          : "hidden" ,
+                    //added by sandeep
+                    'position' : 'relative'
                 };
 
             return $obj.css(css);

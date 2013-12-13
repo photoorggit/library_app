@@ -1,13 +1,28 @@
 var pictView = Backbone.View.extend({
     tagName: 'div', // name of (orphan) root tag in this.el
-    initialize: function(){
+    model:null,
+    initialize: function(p){
         _.bindAll(this, 'render'); // every function that uses 'this' as the current object should be in here
+        model:p;
+    },
+    events:{
+      "click":"test"
     },
     render: function(){
         var html = _.template($('#pictView').html(), this.model.toJSON());
         $(this.el).html(html);
         //$(this.el).html('<img src='+this.model.get('url')+' width='+this.model.get('width')+'px height='+this.model.get('height')+'px />');
         return this; // for chainable calls, like .render().el
+    },
+    test:function(){
+        var currentEL = this.$el.children()[0];
+        if($(this.$el.children()[0]).hasClass('selectAsset')){
+            $(this.$el.children()[0]).removeClass('selectAsset');
+            $(this.$el.children()[0]).addClass('unselecteAsset');
+        }else{
+            $(this.$el.children()[0]).addClass('selectAsset');
+            $(this.$el.children()[0]).removeClass('unselecteAsset');
+        }
     }
 });
 var yearGridView = Backbone.View.extend({
